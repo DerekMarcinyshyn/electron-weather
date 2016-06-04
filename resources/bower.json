@@ -1,0 +1,16 @@
+{
+  "authors": [
+    "Derek Marcinyshyn"
+  ],
+  "name": "revy-weather",
+  "version": "0.1.0",
+  "license": "MIT",
+  "private": true,
+  "ignore": [],
+  "main": "index.html",
+  "dependencies": {
+    "angular": "^1.5.6",
+    "angular-material": "^1.0.9",
+    "font-awesome": "^4.6.3"
+  }
+}

@@ -1,0 +1,30 @@
+body {
+    -webkit-app-region: drag;
+    background: #323232;
+    color: azure;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+button,
+md-button {
+    -webkit-app-region: no-drag;
+}
+
+h1 {
+    font-size: 14px;
+}
+
+md-toolbar.md-default-theme:not(.md-menu-toolbar),
+md-toolbar:not(.md-menu-toolbar) {
+    background: #323232;
+    color: azure;
+}
+md-toolbar:not(.md-menu-toolbar) .md-button:not(.md-raised) {
+    color: azure;
+}
+
+.wx-temperature {
+    font-size: 80px;
+    padding: 0;
+    margin: 0;
+}
