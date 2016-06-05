@@ -9,10 +9,10 @@ weatherApp.controller('WeatherController', function($scope, $http, $interval) {
         let win = remote.getCurrentWindow();
         win.close();
     });
-
+    
     function getWeather() {
-        $http.get('http://192.168.1.237/current').success(function(data) {
-            $scope.data = data;
+        $http.get('http://192.168.1.237/current').then(function(response) {
+            $scope.data = response.data;
         });
     }
 
@@ -20,19 +20,14 @@ weatherApp.controller('WeatherController', function($scope, $http, $interval) {
         $scope.webcam = 'http://192.168.1.20:2000/latest.jpg?'+new Date();
     }
 
-    $interval(function() {
-        getWeather()}, 10000);
-
-    $interval(function() {
-        getWebcam()}, 60000);
-
     getWeather();
     getWebcam();
+
+    $interval(function() { getWeather() }, 60000);
+    $interval(function() { getWebcam() }, 120000);
 });
 
 weatherApp.config(function($mdThemingProvider) {
     $mdThemingProvider.theme('default')
        .primaryPalette('grey');
-    console.log('set theme');
-
 });
