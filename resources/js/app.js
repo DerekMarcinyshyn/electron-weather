@@ -11,7 +11,7 @@ weatherApp.controller('WeatherController', function($scope, $http, $interval) {
     });
     
     function getWeather() {
-        $http.get('http://192.168.1.237/current').then(function(response) {
+        $http.get('http://localwx.mmm/current').then(function(response) {
             $scope.data = response.data;
         });
     }
